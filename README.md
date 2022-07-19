@@ -1,20 +1,21 @@
 # Exchanger - Сервис обмена валют и сбора статистики по операциям обмена
 
 ## Описание
-
 RESTful сервис для обмена валют и сбора статистики операций обмена. Для корректоного перевода по действительному курсу валют используется Exchange Rates Data API (https://apilayer.com/marketplace/exchangerates_data-api).
-Стек: Spring Boot, Spring Data JPA, MySQL
+Стек: Spring Boot, Spring Data JPA, MySQL. 
+
 
 ## Запуск
-Для запуска вам необходимо в терминале выполнить команду `docker run -ti artemkhal/exchanger`
+Для запуска вам необходимо установить Docker, в терминале выполните команду `docker run -ti artemkhal/exchanger`
 
 ## Использование
-
 Чтобы воспользоваться обменником необходимо выполнить запрос на адрес `http://localhost:8080/exchanger` с указанием параметров 
 `user_id` - id пользователя,
 `to` - название искомой валюты (например RUB),
 `from` - название базовой валюты (например USD),
 `amount` - сумма денег в базовой валюте
+
+Для проверки работы использован Postman
 
 В следующем примере переведем свой первый миллион фунтов стерлингов в белорусские рубли:
 ![Alt-текст](https://github.com/artemkhal/exchanger/blob/master/src/main/resources/images/exchanger.png?raw=true "Пример")
