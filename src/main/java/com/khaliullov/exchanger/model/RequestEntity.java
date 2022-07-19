@@ -21,20 +21,27 @@ public class RequestEntity {
 
     private Double result;
 
-//    @ManyToOne(cascade = CascadeType.ALL)
-//    @JoinColumn(name = "customer_id")
-//    private Customer customer;
-
+    @Column(name = "user_id")
+    private Long userId;
 
     public RequestEntity() {
     }
 
-    public RequestEntity(String currencyTo, String currencyFrom, Double amount, Double result, Customer customer) {
+    public RequestEntity(int id, String currencyTo, String currencyFrom, Double amount, Double result, Long userId) {
+        this.id = id;
         this.currencyTo = currencyTo;
         this.currencyFrom = currencyFrom;
         this.amount = amount;
         this.result = result;
-//        this.customer = customer;
+        this.userId = userId;
+    }
+
+    public RequestEntity(String currencyTo, String currencyFrom, Double amount, Double result, Long userId) {
+        this.currencyTo = currencyTo;
+        this.currencyFrom = currencyFrom;
+        this.amount = amount;
+        this.result = result;
+        this.userId = userId;
     }
 
     public RequestEntity(int id, String currencyTo, String currencyFrom, Double amount, Double result) {
@@ -43,6 +50,14 @@ public class RequestEntity {
         this.currencyFrom = currencyFrom;
         this.amount = amount;
         this.result = result;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getCurrencyTo() {
@@ -77,13 +92,13 @@ public class RequestEntity {
         this.result = result;
     }
 
-//    public Customer getCustomer() {
-//        return customer;
-//    }
+    public Long getUserId() {
+        return userId;
+    }
 
-//    public void setCustomer(Customer customer) {
-//        this.customer = customer;
-//    }
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
     @Override
     public String toString() {
@@ -93,7 +108,7 @@ public class RequestEntity {
                 ", currencyFrom='" + currencyFrom + '\'' +
                 ", amount=" + amount +
                 ", result=" + result +
-//                ", customer=" + customer +
+                ", userId=" + userId +
                 '}';
     }
 }
