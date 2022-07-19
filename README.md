@@ -5,6 +5,9 @@
 RESTful сервис для обмена валют и сбора статистики операций обмена. Для корректоного перевода по действительному курсу валют используется Exchange Rates Data API (https://apilayer.com/marketplace/exchangerates_data-api).
 Стек: Spring Boot, Spring Data JPA, MySQL
 
+## Запуск
+Для запуска вам необходимо в терминале выполнить команду `docker run -ti artemkhal/exchanger`
+
 ## Использование
 
 Чтобы воспользоваться обменником необходимо выполнить запрос на адрес `http://localhost:8080/exchanger` с указанием параметров 
