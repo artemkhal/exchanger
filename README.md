@@ -1,7 +1,7 @@
 # Exchanger - Сервис обмена валют и сбора статистики по операциям обмена
 
 ## Описание
-RESTful сервис для обмена валют и сбора статистики операций обмена. Для корректоного перевода по действительному курсу валют используется Exchange Rates Data API (https://apilayer.com/marketplace/exchangerates_data-api).
+REST сервис для обмена валют и сбора статистики операций обмена. Для корректоного перевода по действительному курсу валют используется Exchange Rates Data API (https://apilayer.com/marketplace/exchangerates_data-api).
 Стек: Spring Boot, Spring Data JPA, MySQL. 
 
 
